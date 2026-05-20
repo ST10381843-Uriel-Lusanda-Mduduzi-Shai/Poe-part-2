@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.mychatapp.MessagesTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.117 s <<< FAILURE! -- in com.mycompany.mychatapp.MessagesTest
+com.mycompany.mychatapp.MessagesTest.testCheckMessage -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not supported yet.
+	at com.mycompany.mychatapp.MessagesTest.assertTrue(MessagesTest.java:53)
+	at com.mycompany.mychatapp.MessagesTest.testCheckMessage(MessagesTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.mycompany.mychatapp.MessagesTest.testSentMessage -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not supported yet.
+	at com.mycompany.mychatapp.MessagesTest.assertTrue(MessagesTest.java:53)
+	at com.mycompany.mychatapp.MessagesTest.testSentMessage(MessagesTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
