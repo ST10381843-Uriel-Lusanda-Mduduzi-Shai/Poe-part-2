@@ -50,7 +50,7 @@ public class UserLogin {
      public boolean checkCellPhoneNumber(String Pnumber) {
         String regexSANumber = "^(\\+27)[0-9]{9}$";
         
-         if (Pnumber.contains(regexSANumber) && Pnumber.length() >= 9 ) {
+         if (Pnumber.contains(regexSANumber) && Pnumber.length() <= 11 ) {
             System.out.println("Cellphone number successfully added");
         }else{
              System.out.println("Cellphone number is incorrectly added");

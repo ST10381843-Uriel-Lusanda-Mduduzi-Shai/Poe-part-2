@@ -47,6 +47,8 @@ public class MyChatApp {
         System.out.println("Option 1. Send Messages : ");
         System.out.println("Option 2. Show recent mesagges :  ");
         System.out.println("Option 3. Quit : ");
+        option = scan.nextLine();
+        
         
         
         System.out.println(message1.messageID);
