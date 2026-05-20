@@ -1,4 +1,5 @@
 package com.mycompany.mychatapp;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Scanner;
 
 public class MyChatApp {
@@ -11,6 +12,7 @@ public class MyChatApp {
         String firstName;
         String lastName;
         String Pnumber;
+        String Rnumber;
         int option;
         String SEND;
         String message;
@@ -42,24 +44,40 @@ public class MyChatApp {
         System.out.println(user1.returnLoginUser(Username, Password));
         
         System.out.println("Welcome " + firstName + "," + lastName + " " + "it is great to see you again." );
-       
-        System.out.println("Welcome to QuickChat");
-        System.out.println("----QuickChat Menu----");
-        System.out.println("Option 1. Send Messages : ");
-        System.out.println("Option 2. Show recent mesagges :  ");
-        System.out.println("Option 3. Quit : ");
-        option = scan.nextInt();
-        message1.menuOptions(option);
-        
-        System.out.println("Type 'Send', 'Store' or 'Disregard' ");
-        SEND =scan.nextLine();
-        message1.sentMessage(SEND);
-        
-        System.out.println(message1.messageID);
-        
-        message = scan.next();
-        message1.checkMessage(message);
+      
+        try{ 
+            System.out.println("Welcome to QuickChat");
+            System.out.println("----QuickChat Menu----");
+            System.out.println("Option 1. Send Messages : ");
+            System.out.println("Option 2. Show recent mesagges :  ");
+            System.out.println("Option 3. Quit : ");
+            option = scan.nextInt();
+            message1.menuOptions(option);
 
+            System.out.println("Please enter the recipeints cell number");
+            Rnumber = scan.nextLine();
+            message1.recipientCellNo(Pnumber);
+
+
+            System.out.println("Type your message");
+            message = scan.nextLine();
+            message1.checkMessage(message);
+            System.out.println("Message ID:" + message1.messageID);
+
+            System.out.println("Type 'Send', 'Store' or 'Disregard' ");
+            SEND = scan.nextLine();
+            message1.sentMessage(SEND);
+            
+            ObjectMapper mapper = new ObjectMapper();
+            
+            String json = mapper.writeValueAsString(message1);
+            
+            System.out.println(json);
+            
+        }catch(Exception e){
+            System.out.println();
+        }
+        
     }
     
 }

@@ -34,6 +34,7 @@ public class Messages {
         return message;
     }
     
+    //This method allows the user to choose which option they want to use on the app
     public int menuOptions(int options){
         if(options == 1){
             System.out.println("Welcome to messages");
