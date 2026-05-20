@@ -35,6 +35,11 @@ public class Messages {
     }
     
     //This method allows the user to choose which option they want to use on the app
+    /**
+     * this method is from geeks for geeks
+     * https://www.geeksforgeeks.org/java/system-exit-in-java/
+     * I learned how to stop or end the application
+     */
     public int menuOptions(int options){
         if(options == 1){
             System.out.println("Welcome to messages");
@@ -59,6 +64,12 @@ public class Messages {
     }
     
     //Checks the recipients cellphone number
+    /**
+     * this method is from Stack Overflow
+     * https://stackoverflow.com/questions/4058001/validate-south-africa-cell-phone-number
+     * Duncanmoo
+     * I learned how to implement and declare the South African national number code for my method
+     */
     public boolean recipientCellNo(String Pnumber) {
         String regexSANumber = "^(\\+27)[0-9]{9}$";
         

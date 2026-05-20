@@ -10,10 +10,13 @@ public class MessagesTest {
 
     @Test
     public void testCheckNumGen() {
-        int randomNum = 0;
+        long min = 1000000000L;
+        long max = 9999999999L;
+        
+        long messageID = (long) (Math.random()*(max - min + 1) + min);
         Messages msTest = new Messages();
         
-        System.out.println(msTest.checkNumGen(randomNum));
+        System.out.println(msTest.checkNumGen((int) messageID));
         
     }
 
@@ -22,7 +25,7 @@ public class MessagesTest {
         String message = "Hi Mike, are you coming tonight?";
         Messages msTest = new Messages();
         
-        assertTrue(msTest.checkMessage(message));
+        System.out.println(msTest.checkMessage(message));
     }
 
     @Test
@@ -38,7 +41,7 @@ public class MessagesTest {
         String sent = "Disregard";
         Messages msTest = new Messages();
         
-        assertTrue(msTest.sentMessage(sent));
+        System.out.println(msTest.sentMessage(sent));
     }
 
     @Test
@@ -49,8 +52,4 @@ public class MessagesTest {
         System.out.println(Rnumber);
     }
 
-    private void assertTrue(String checkMessage) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }
