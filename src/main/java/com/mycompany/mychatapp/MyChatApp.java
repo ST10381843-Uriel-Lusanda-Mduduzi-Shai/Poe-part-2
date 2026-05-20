@@ -11,7 +11,8 @@ public class MyChatApp {
         String firstName;
         String lastName;
         String Pnumber;
-        String option;
+        int option;
+        String SEND;
         String message;
         UserLogin user1 = new UserLogin();
         Messages message1 = new Messages();
@@ -47,9 +48,12 @@ public class MyChatApp {
         System.out.println("Option 1. Send Messages : ");
         System.out.println("Option 2. Show recent mesagges :  ");
         System.out.println("Option 3. Quit : ");
-        option = scan.nextLine();
+        option = scan.nextInt();
+        message1.menuOptions(option);
         
-        
+        System.out.println("Type 'Send', 'Store' or 'Disregard' ");
+        SEND =scan.nextLine();
+        message1.sentMessage(SEND);
         
         System.out.println(message1.messageID);
         
